@@ -20,4 +20,4 @@ class Tarefas(models.Model):
 #1 Tarefa só pode se vinculada a 1 status
 
     def __str__(self):
-        return f"{self.descricao} - {self.status}"
+        return f"{self.descricao} - {self.status }"
