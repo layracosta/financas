@@ -1,8 +1,7 @@
-from django.urls import path
-from .views import listar_transacoes, listar_transacoes_pendentes, listar_transacoes_pagas
+from rest_framework.routers import SimpleRouter
+from .views import TransacaoViewSet
 
-urlpatterns = [
-    path('transacoes/', listar_transacoes),
-    path('transacoes/pendentes/', listar_transacoes_pendentes),
-    path('transacoes/pagas/', listar_transacoes_pagas),
-]
+router = SimpleRouter()
+router.register('transacoes', TransacaoViewSet)
+
+urlpatterns = router.urls
